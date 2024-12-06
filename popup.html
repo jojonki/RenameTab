@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Renamer</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 10px;
+      width: 300px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      width: 100%;
+      height: 35px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    .emoji-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+
+    .emoji-item {
+      font-size: 14px;
+      cursor: pointer;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+      width: calc(10% - 5px);
+      box-sizing: border-box;
+    }
+
+    .emoji-item.selected {
+      background-color: #007bff;
+      color: #fff;
+      border-color: #0056b3;
+    }
+
+    button, a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      margin-bottom: 5px;
+      text-decoration: none;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    a {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="emoji-list" id="emoji-list"></div>
+  <textarea id="tab-name" placeholder="Enter new tab name..."></textarea>
+  <button id="rename-tab">Rename Tab (enter)</button>
+  <a href="settings.html" target="_blank">Customize Emoji list</a>
+
+  <script src="config.js"></script>
+  <script src="popup.js"></script>
+</body>
+
+</html>

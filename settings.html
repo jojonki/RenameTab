@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 5px;
+      text-align: center;
+      border: none;
+      color: white;
+      background-color: #007bff;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Settings</h1>
+  <p>Edit your emoji list (separated by commas):</p>
+  <textarea id="emoji-list-input"></textarea>
+  <button id="save-settings">Save</button>
+  <button id="reset-to-default">Reset Emoji list</button>
+
+  <script src="config.js"></script>
+  <script src="settings.js"></script>
+</body>
+
+</html>
