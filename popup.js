@@ -37,7 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // }
 
     try {
-      const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+      const [tab] = await chrome.tabs.query({
+        active: true,
+        currentWindow: true,
+      });
       if (tab && tab.id) {
         const fullTitle = `${selectedEmoji} ${newText}`.trim();
         await chrome.scripting.executeScript({
@@ -51,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     } catch (error) {
       console.error("Error updating tab title:", error);
-      alert("Failed to update tab title.");
+      alert("This page does not allow title updates.");
     }
   }
 
